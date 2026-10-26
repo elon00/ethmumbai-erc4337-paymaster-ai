@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "ethmumbai-erc4337-paymaster-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Arbitrum / Ethereum L2",
+        "PROJECT_TICKER": "EM4337"
+      },
+      "tools": [
+        {
+          "name": "verify_em4337_invariants",
+          "description": "Verifies deterministic invariants for ETHMumbai ERC-4337 Paymaster AI on Arbitrum / Ethereum L2."
+        },
+        {
+          "name": "execute_em4337_action",
+          "description": "Executes authenticated Account Abstraction state transition."
+        }
+      ]
+    }
+  }
+}
